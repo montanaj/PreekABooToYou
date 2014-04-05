@@ -29,6 +29,7 @@
 		70A103C318F083DA00D5FA66 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A103C218F083DA00D5FA66 /* User.m */; };
 		70A103C618F08A7E00D5FA66 /* calvin.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A103C418F08A7E00D5FA66 /* calvin.png */; };
 		70A103C718F08A7E00D5FA66 /* clairePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A103C518F08A7E00D5FA66 /* clairePhoto.png */; };
+		70AF520018F0AB73009EDF34 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AF51FF18F0AB73009EDF34 /* AddUserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		70A103C218F083DA00D5FA66 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		70A103C418F08A7E00D5FA66 /* calvin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calvin.png; sourceTree = "<group>"; };
 		70A103C518F08A7E00D5FA66 /* clairePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clairePhoto.png; sourceTree = "<group>"; };
+		70AF51FE18F0AB73009EDF34 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddUserViewController.h; path = ../AddUserViewController.h; sourceTree = "<group>"; };
+		70AF51FF18F0AB73009EDF34 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddUserViewController.m; path = ../AddUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 		702805D718EF2A8C00AAA935 /* PreekABooToYou */ = {
 			isa = PBXGroup;
 			children = (
+				70AF51FE18F0AB73009EDF34 /* AddUserViewController.h */,
+				70AF51FF18F0AB73009EDF34 /* AddUserViewController.m */,
 				7028060618EF2C7900AAA935 /* ProfileViewController.h */,
 				70A103C418F08A7E00D5FA66 /* calvin.png */,
 				70A103C518F08A7E00D5FA66 /* clairePhoto.png */,
@@ -282,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7028061518EF7A8600AAA935 /* DetailProfileViewController.m in Sources */,
+				70AF520018F0AB73009EDF34 /* AddUserViewController.m in Sources */,
 				70A103C318F083DA00D5FA66 /* User.m in Sources */,
 				702805E518EF2A8C00AAA935 /* PreekABooToYou.xcdatamodeld in Sources */,
 				702805DE18EF2A8C00AAA935 /* main.m in Sources */,
