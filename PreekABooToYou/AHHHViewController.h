@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ProfileViewController : UIViewController
+@interface BuggyViewController : UIViewController
 
 @property (nonatomic) NSManagedObjectContext *managedObjectContext;
 

@@ -7,7 +7,7 @@
 //
 
 #import "CMJAppDelegate.h"
-#import "ProfileViewController.h"
+#import "AHHHViewController.h"
 
 @implementation CMJAppDelegate
 
@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UINavigationController *navController = (id)self.window.rootViewController;
-    ProfileViewController *allProfileViewController = navController.viewControllers[0]; //the nav controller inherently holds a stack or array of view controller objects. So while the .viewcontrollers array isn't declared anywhere we can still use it.
+    BuggyViewController *allProfileViewController = navController.viewControllers[0]; //the nav controller inherently holds a stack or array of view controller objects. So while the .viewcontrollers array isn't declared anywhere we can still use it.
     allProfileViewController.managedObjectContext = self.managedObjectContext;
 
     return YES;

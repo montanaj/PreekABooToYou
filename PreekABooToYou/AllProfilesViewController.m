@@ -9,13 +9,13 @@
 
 #import <AddressBookUI/AddressBookUI.h>
 #import <AddressBook/AddressBook.h>
-#import "ProfileViewController.h"
+#import "AHHHViewController.h"
 #import "User.h"
 #import "UserCollectionViewCell.h"
 #import "DetailProfileViewController.h"
 #import "AddUserViewController.h"
 
-@interface ProfileViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface BuggyViewController()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (nonatomic) NSArray *allUsersArray;
@@ -23,9 +23,7 @@
 
 @end
 
-@implementation ProfileViewController
-
-
+@implementation BuggyViewController
 
 
 - (void)viewDidLoad
@@ -87,6 +85,16 @@
         NSData *data2 = [NSData dataWithContentsOfFile:pathString2];
         user2.photo = data2;
         
+        User *user3 = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+        user3.name = @"Rachel SK";
+        user3.address = @"Ocean Beach";
+        user3.phoneNumber = @"719-789-7565";
+        NSString *pathString3 = [[NSBundle mainBundle] pathForResource:@"rask" ofType:@".png"];
+        NSData *data3 = [NSData dataWithContentsOfFile:pathString3];
+        user3.photo = data3;
+
+        
+        [self askForAddressBookAccess];
         [self.managedObjectContext save:nil];
         [self load];
     }
