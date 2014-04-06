@@ -7,7 +7,9 @@
 //
 
 #import "CMJAppDelegate.h"
-#import "AHHHViewController.h"
+#import "AllProfileViewController.h"
+#import "FriendsViewController.h"
+#import "CoWorkerViewController.h"
 
 @implementation CMJAppDelegate
 
@@ -17,10 +19,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UINavigationController *navController = (id)self.window.rootViewController;
-    BuggyViewController *allProfileViewController = navController.viewControllers[0]; //the nav controller inherently holds a stack or array of view controller objects. So while the .viewcontrollers array isn't declared anywhere we can still use it.
+    UITabBarController *tabBarController = (id)self.window.rootViewController;
+    AllProfileViewController *allProfileViewController;
+    FriendsViewController *friendsViewController;
+    CoWorkersViewController *coWorkersViewController;
+    for (UINavigationController *navController in tabBarController.viewControllers)
+    {
+        for (UIViewController *viewController in navController.viewControllers)
+        {
+            if ([viewController isKindOfClass:[AllProfileViewController class]])
+            {
+                allProfileViewController = (id)viewController;
+            }
+            else if ([viewController isKindOfClass:[FriendsViewController class]])
+            {
+                friendsViewController = (id)viewController;
+            }
+            else if ([viewController isKindOfClass:[CoWorkersViewController class]])
+            {
+                coWorkersViewController = (id)viewController;
+            }
+        }
+    }
     allProfileViewController.managedObjectContext = self.managedObjectContext;
-
+    friendsViewController.managedObjectContext = self.managedObjectContext;
+    coWorkersViewController.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 

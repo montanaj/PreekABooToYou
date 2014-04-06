@@ -1,5 +1,5 @@
 //
-//  FriendsViewController.h
+//  AllProfileViewController.h
 //  PreekABooToYou
 //
 //  Created by Claire Jencks on 4/6/14.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FriendsViewController : UIViewController
+@interface AllProfileViewController : UIViewController
+
 
 @property (nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end

@@ -1,35 +1,36 @@
 //
-//  ProfileViewController.m
+//  AllProfileViewController.m
 //  PreekABooToYou
 //
-//  Created by Claire Jencks on 4/4/14.
+//  Created by Claire Jencks on 4/6/14.
 //  Copyright (c) 2014 Claire Jencks. All rights reserved.
 //
 
-
+#import "AllProfileViewController.h"
 #import <AddressBookUI/AddressBookUI.h>
 #import <AddressBook/AddressBook.h>
-#import "AHHHViewController.h"
 #import "User.h"
 #import "UserCollectionViewCell.h"
 #import "DetailProfileViewController.h"
 #import "AddUserViewController.h"
+#import "FriendsViewController.h"
 
-@interface BuggyViewController()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface AllProfileViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
+
 @property (nonatomic) NSArray *allUsersArray;
 
+@property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
 @end
 
-@implementation BuggyViewController
+@implementation AllProfileViewController
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //these are very important items 
+    //these are very important items
     self.allUsersArray = [NSArray new];
     
     [self load];
@@ -41,8 +42,8 @@
     //self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:106/255.0f green:65/255.0f blue:91/255.0f alpha:0.1f];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:56/255.0f green:82/255.0f blue:223/255.0f alpha:1.0f]};
-
-
+    
+    
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -92,7 +93,7 @@
         NSString *pathString3 = [[NSBundle mainBundle] pathForResource:@"rask" ofType:@".png"];
         NSData *data3 = [NSData dataWithContentsOfFile:pathString3];
         user3.photo = data3;
-
+        
         
         [self askForAddressBookAccess];
         [self.managedObjectContext save:nil];
@@ -119,7 +120,7 @@
         AddUserViewController *destination = segue.destinationViewController;
         destination.managedObjectContext = self.managedObjectContext;
     }
-
+    
 }
 
 #pragma mark -- helper methods
@@ -232,3 +233,4 @@
 
 
 @end
+

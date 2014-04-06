@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Contacts-->
+        <!--All Profile View Controller - Contacts-->
         <scene sceneID="CCF-Nv-Dvp">
             <objects>
-                <viewController id="UvX-WY-yyd" customClass="AHHHViewController" sceneMemberID="viewController">
+                <viewController id="UvX-WY-yyd" customClass="AllProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="86m-Kr-RlJ"/>
                         <viewControllerLayoutGuide type="bottom" id="pJW-53-fwS"/>
@@ -20,21 +20,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="88w-GJ-Ui3">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="109" height="109"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellReuseID" id="N7J-8q-HdF" customClass="UserCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="64" width="109" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="109" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la3-g9-7s5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="109" height="109"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -63,7 +63,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="myCollectionView" destination="lBL-HZ-QAN" id="wUK-aB-ca4"/>
+                        <outlet property="myCollectionView" destination="lBL-HZ-QAN" id="zdt-pW-aHb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imT-yb-Fad" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -525,12 +525,12 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3093" y="114"/>
+            <point key="canvasLocation" x="3134" y="-15"/>
         </scene>
-        <!--View Controller - Contacts-->
+        <!--Co Worker View Controller - Contacts-->
         <scene sceneID="DdT-qb-tKx">
             <objects>
-                <viewController id="c2Y-2a-YfT" customClass="AHHHViewController" sceneMemberID="viewController">
+                <viewController id="c2Y-2a-YfT" customClass="CoWorkerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ryP-VO-w1M"/>
                         <viewControllerLayoutGuide type="bottom" id="pif-nR-xhL"/>
@@ -543,21 +543,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tdZ-kO-Cqi">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="105" height="103"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellReuseID" id="E4w-mW-TOb" customClass="UserCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="64" width="105" height="103"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="105" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lb3-oX-xFy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -566,6 +566,7 @@
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="myImageView" destination="Lb3-oX-xFy" id="pF5-KM-rvA"/>
+                                            <segue destination="UPM-pV-OsE" kind="push" id="hWO-Kn-lTo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -578,20 +579,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contacts" id="Cal-Su-7WO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WW9-s6-brC"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="WW9-s6-brC">
+                            <connections>
+                                <segue destination="jKT-2c-y1v" kind="push" id="8J8-8T-K6h"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="myCollectionView" destination="FOj-BK-MGz" id="JXO-oe-LGt"/>
+                        <outlet property="myCollectionView" destination="FOj-BK-MGz" id="XIb-Qb-uzv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nI-EE-gYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2318" y="-1306"/>
         </scene>
-        <!--View Controller - Contacts-->
+        <!--Friends View Controller - Contacts-->
         <scene sceneID="ZRQ-BT-mT5">
             <objects>
-                <viewController id="3Ta-yC-e4j" customClass="AHHHViewController" sceneMemberID="viewController">
+                <viewController id="3Ta-yC-e4j" customClass="FriendsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xcd-3a-Eil"/>
                         <viewControllerLayoutGuide type="bottom" id="6Ng-1R-7ja"/>
@@ -604,21 +609,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uhi-7v-Lul">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="105" height="108"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellReuseID" id="3R3-nD-icL" customClass="UserCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="64" width="105" height="108"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="105" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k8y-aa-R4U">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="108"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -627,6 +632,7 @@
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="myImageView" destination="k8y-aa-R4U" id="Zpn-gu-6RR"/>
+                                            <segue destination="UPM-pV-OsE" kind="push" id="1ez-Af-2sG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -639,10 +645,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contacts" id="PSJ-IP-8X5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="67k-QL-Ma3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="67k-QL-Ma3">
+                            <connections>
+                                <segue destination="jKT-2c-y1v" kind="push" id="H8k-gu-Qqp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="myCollectionView" destination="Ba1-XT-i4T" id="bya-5z-pPR"/>
+                        <outlet property="myCollectionView" destination="Ba1-XT-i4T" id="zst-UN-Bnk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57l-Xs-hAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -732,4 +742,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="hWO-Kn-lTo"/>
+        <segue reference="8J8-8T-K6h"/>
+    </inferredMetricsTieBreakers>
 </document>
