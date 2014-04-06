@@ -8,42 +8,53 @@
 
 #import "AddUserViewController.h"
 
-@interface AddUserViewController ()
+@interface AddUserViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic) UIImagePickerController *imagePickerController;
+@property (strong, nonatomic) IBOutlet UITextField *mynameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *myCellNumberTextField;
+@property (strong, nonatomic) IBOutlet UITextField *myEmailTextField;
+@property (strong, nonatomic) IBOutlet UITextField *myAddressTextField;
+
 
 @end
 
 @implementation AddUserViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
-- (void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.imagePickerController = [UIImagePickerController new];
+    self.imagePickerController.delegate = self;
+    self.imagePickerController.allowsEditing = NO;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else
+    {
+        self.imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
 }
-*/
+- (IBAction)onAddPhotoPressed:(id)sender
+{
+    [self presentViewController:self.imagePickerController animated:YES completion:nil];
+    
+}
+
 
 @end

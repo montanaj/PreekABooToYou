@@ -76,10 +76,10 @@
         self.myOverlayView.hidden = NO;
         self.myRightSwipeGesture.enabled = NO;
         self.myLeftSwipeGesture.enabled = NO;
-        self.nameLabel.text = [NSString stringWithFormat:@"Name: %@", self.currentUser.name];
-        self.myAddressLabel.text = [NSString stringWithFormat:@"Address: %@", self.currentUser.address];
-        self.phoneNumberLabel.text = [NSString stringWithFormat:@"Phone: %@", self.currentUser.phoneNumber];
-        self.myEmail.text = [NSString stringWithFormat:@"Email: %@", self.currentUser.email];
+        self.nameLabel.text = [NSString stringWithFormat:@"%@", self.currentUser.name];
+        self.myAddressLabel.text = [NSString stringWithFormat:@"%@", self.currentUser.address];
+        self.phoneNumberLabel.text = [NSString stringWithFormat:@"%@", self.currentUser.phoneNumber];
+        self.myEmail.text = [NSString stringWithFormat:@"%@", self.currentUser.email];
     }
     else if (swipe.direction == UISwipeGestureRecognizerDirectionDown)
     {

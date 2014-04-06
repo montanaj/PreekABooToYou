@@ -70,8 +70,8 @@
 		7028061418EF7A8600AAA935 /* DetailProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailProfileViewController.m; sourceTree = "<group>"; };
 		70A103C118F083DA00D5FA66 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		70A103C218F083DA00D5FA66 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		70A103C418F08A7E00D5FA66 /* calvin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calvin.png; sourceTree = "<group>"; };
-		70A103C518F08A7E00D5FA66 /* clairePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clairePhoto.png; sourceTree = "<group>"; };
+		70A103C418F08A7E00D5FA66 /* calvin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calvin.png; path = PreekABooToYou/calvin.png; sourceTree = "<group>"; };
+		70A103C518F08A7E00D5FA66 /* clairePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clairePhoto.png; path = PreekABooToYou/clairePhoto.png; sourceTree = "<group>"; };
 		70AF51FE18F0AB73009EDF34 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddUserViewController.h; path = ../AddUserViewController.h; sourceTree = "<group>"; };
 		70AF51FF18F0AB73009EDF34 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddUserViewController.m; path = ../AddUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				702805E618EF2A8C00AAA935 /* Images.xcassets */,
+				70A103C418F08A7E00D5FA66 /* calvin.png */,
+				70A103C518F08A7E00D5FA66 /* clairePhoto.png */,
 				702805E018EF2A8C00AAA935 /* CMJAppDelegate.h */,
 				702805E118EF2A8C00AAA935 /* CMJAppDelegate.m */,
 				702805E318EF2A8C00AAA935 /* PreekABooToYou.xcdatamodeld */,
@@ -144,8 +146,6 @@
 				70AF51FE18F0AB73009EDF34 /* AddUserViewController.h */,
 				70AF51FF18F0AB73009EDF34 /* AddUserViewController.m */,
 				7028060618EF2C7900AAA935 /* ProfileViewController.h */,
-				70A103C418F08A7E00D5FA66 /* calvin.png */,
-				70A103C518F08A7E00D5FA66 /* clairePhoto.png */,
 				7028060718EF2C7900AAA935 /* ProfileViewController.m */,
 				7028061318EF7A8600AAA935 /* DetailProfileViewController.h */,
 				7028061418EF7A8600AAA935 /* DetailProfileViewController.m */,

@@ -10,4 +10,8 @@
 
 @interface AddUserViewController : UIViewController
 
+
+@property (nonatomic) NSManagedObjectContext *managedObjectContext;
+
+
 @end

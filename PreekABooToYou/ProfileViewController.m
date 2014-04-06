@@ -6,10 +6,14 @@
 //  Copyright (c) 2014 Claire Jencks. All rights reserved.
 //
 
+
+#import <AddressBookUI/AddressBookUI.h>
+#import <AddressBook/AddressBook.h>
 #import "ProfileViewController.h"
 #import "User.h"
 #import "UserCollectionViewCell.h"
 #import "DetailProfileViewController.h"
+#import "AddUserViewController.h"
 
 @interface ProfileViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -38,10 +42,10 @@
     self.navigationController.navigationBar.translucent = YES;
     //self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:106/255.0f green:65/255.0f blue:91/255.0f alpha:0.1f];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:56/255.0f green:82/255.0f blue:223/255.0f alpha:1.0f]};
 
 
 }
-
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.allUsersArray.count;
@@ -77,8 +81,8 @@
         
         User *user2 = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
         user2.name = @"Schmalvin Hildreth";
-        user2.address = @"Penthouse Apartment";
-        user2.phoneNumber = @"Wouldn't you like to know";
+        user2.address = @"Penthouse 123";
+        user2.phoneNumber = @"541-745-7876";
         NSString *pathString2 = [[NSBundle mainBundle] pathForResource:@"calvin" ofType:@".png"];
         NSData *data2 = [NSData dataWithContentsOfFile:pathString2];
         user2.photo = data2;
@@ -102,7 +106,121 @@
         destination.allUsersArray = self.allUsersArray;
         destination.currentIndex = indexPath.row;
     }
+    else if ([sender isKindOfClass:[UIBarButtonItem class]])
+    {
+        AddUserViewController *destination = segue.destinationViewController;
+        destination.managedObjectContext = self.managedObjectContext;
+    }
+
 }
+
+#pragma mark -- helper methods
+
+-(void)askForAddressBookAccess
+{
+    ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, NULL);
+    
+    if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusNotDetermined)
+    {
+        ABAddressBookRequestAccessWithCompletion(addressBookRef, ^(bool granted, CFErrorRef error)
+                                                 {
+                                                     if (granted)
+                                                     {
+                                                         [self addUsersFromAddressBook];
+                                                     }
+                                                     else
+                                                     {
+                                                         UIAlertView *importFailedAlert = [[UIAlertView alloc] initWithTitle:@"Couldn't Find Contacts"
+                                                                                                                     message:@"If you would like to import your contacts, please change your privacy settings for this app."
+                                                                                                                    delegate:self
+                                                                                                           cancelButtonTitle:@"Ok"
+                                                                                                           otherButtonTitles: nil];
+                                                         [importFailedAlert show];
+                                                     }
+                                                 });
+    }
+    else if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized)
+    {
+        [self addUsersFromAddressBook];
+    }
+    else
+    {
+        UIAlertView *importFailedAlert = [[UIAlertView alloc] initWithTitle:@"Couldn't Find Contacts"
+                                                                    message:@"If you would like to import your contacts, please change your privacy settings for this app."
+                                                                   delegate:self
+                                                          cancelButtonTitle:@"Ok"
+                                                          otherButtonTitles: nil];
+        [importFailedAlert show];
+    }
+}
+
+-(void)addUsersFromAddressBook
+{
+    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
+    CFArrayRef people  = ABAddressBookCopyArrayOfAllPeople(addressBook);
+    for (int i = 0;i<ABAddressBookGetPersonCount(addressBook);i++)
+    {
+        ABRecordRef person = CFArrayGetValueAtIndex(people, i);
+        
+        User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User"
+                                                   inManagedObjectContext:self.managedObjectContext];
+        
+        NSString *firstName = (NSString *)CFBridgingRelease(ABRecordCopyValue(person,kABPersonFirstNameProperty));
+        NSString *lastName = (NSString *)CFBridgingRelease(ABRecordCopyValue(person,kABPersonLastNameProperty));
+        if (!firstName)
+        {
+            firstName = @"";
+        }
+        if (!lastName)
+        {
+            lastName = @"";
+        }
+        user.name = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+        
+        ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
+        for (int x = 0; x<ABMultiValueGetCount(phoneNumbers); x++)
+        {
+            NSString *phoneNumber = (NSString *)CFBridgingRelease(ABMultiValueCopyValueAtIndex(phoneNumbers, x));
+            if (user.phoneNumber) {
+                user.phoneNumber = [NSString stringWithFormat:@"%@\n%@", user.phoneNumber, phoneNumber];
+            }
+            else
+            {
+                user.phoneNumber = phoneNumber;
+            }
+        }
+        ABMultiValueRef addresses = ABRecordCopyValue(person, kABPersonAddressProperty);
+        for (int i = 0; i < ABMultiValueGetCount(addresses); i++)
+        {
+            NSDictionary *address = (NSDictionary *)CFBridgingRelease(ABMultiValueCopyValueAtIndex(addresses, i));
+            if (address)
+            {
+                user.address = [NSString stringWithFormat:@"%@, %@, %@, %@, %@",
+                                address[@"Street"],
+                                address[@"City"],
+                                address[@"State"],
+                                address[@"CountryCode"],
+                                address[@"ZIP"]];
+            }
+            else
+            {
+                user.address = @"";
+            }
+        }
+        ABMultiValueRef emailAdresses = ABRecordCopyValue(person, kABPersonEmailProperty);
+        for (int i = 0; i < ABMultiValueGetCount(emailAdresses); i++)
+        {
+            NSString *emailAdress = (NSString*)CFBridgingRelease(ABMultiValueCopyValueAtIndex(emailAdresses, i));
+            NSLog(@"%@", emailAdress);
+        }
+        
+        if (ABPersonHasImageData(person))
+        {
+            user.photo = (NSData *)CFBridgingRelease(ABPersonCopyImageData(person));
+        }
+    }
+}
+
 
 
 @end
