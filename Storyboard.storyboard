@@ -168,6 +168,9 @@
                                     <color key="titleColor" white="1" alpha="0.79000000000000004" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onAddFriendButtonPressed:" destination="jKT-2c-y1v" eventType="touchUpInside" id="It8-D6-TFr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06F-WU-Kfw">
                                 <rect key="frame" x="118" y="507" width="84" height="30"/>
@@ -178,6 +181,9 @@
                                     <color key="titleColor" white="1" alpha="0.79000000000000004" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onAddCoworkerButtonPressed:" destination="jKT-2c-y1v" eventType="touchUpInside" id="WOq-AJ-CU2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4Y-7P-0fl">
                                 <rect key="frame" x="216" y="507" width="84" height="30"/>
@@ -188,6 +194,9 @@
                                     <color key="titleColor" white="1" alpha="0.79000000000000004" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onAddOtherButtonPressed:" destination="jKT-2c-y1v" eventType="touchUpInside" id="4Ze-yC-gIP"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gK7-kI-qDf" userLabel="Photo + Button View">
                                 <rect key="frame" x="34" y="73" width="185" height="196"/>
@@ -228,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXn-2m-lM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3020" y="-806"/>
+            <point key="canvasLocation" x="3097" y="-1102"/>
         </scene>
         <!--Detail Profile View Controller-->
         <scene sceneID="afL-xa-JDE">
@@ -316,8 +325,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.078431375319999996" green="0.1019607931" blue="0.31764706970000001" alpha="1" colorSpace="deviceRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-ht-EBa" userLabel="Add changes Button">
-                                        <rect key="frame" x="149" y="273" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-ht-EBa" userLabel="my edit Button">
+                                        <rect key="frame" x="258" y="161" width="22" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,6 +341,9 @@
                                             <color key="titleColor" white="1" alpha="0.79000000000000004" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onFriendButtonPressed:" destination="UPM-pV-OsE" eventType="touchUpInside" id="avO-fF-6hk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgE-3v-Gqg">
                                         <rect key="frame" x="118" y="507" width="84" height="30"/>
@@ -342,8 +354,11 @@
                                             <color key="titleColor" white="1" alpha="0.79000000000000004" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoworkerButtonPressed:" destination="UPM-pV-OsE" eventType="touchUpInside" id="fMX-nP-aMe"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2T-il-nIH">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2T-il-nIH" userLabel="Button - Delete">
                                         <rect key="frame" x="216" y="507" width="84" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.91764712329999998" green="0.27843138579999999" blue="0.24313727020000001" alpha="1" colorSpace="deviceRGB"/>
@@ -352,6 +367,9 @@
                                             <color key="titleColor" white="1" alpha="0.79000000000000004" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onDeleteButtonPressed:" destination="UPM-pV-OsE" eventType="touchUpInside" id="vAl-P1-ekl"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aut-sT-Z2n" userLabel="Background behind photo view">
                                         <rect key="frame" x="25" y="64" width="205" height="216"/>
@@ -484,11 +502,20 @@
                     <connections>
                         <outlet property="flipView" destination="awP-0a-ZCR" id="QQF-t5-SQ6"/>
                         <outlet property="myAddressLabel" destination="wBw-4h-PTu" id="RDN-es-Nzv"/>
+                        <outlet property="myCellEditTextField" destination="VCF-5R-DN2" id="oAE-iC-GDi"/>
+                        <outlet property="myCoworkerEditButton" destination="wgE-3v-Gqg" id="zyx-DC-Epw"/>
+                        <outlet property="myDeleteEditButton" destination="G2T-il-nIH" id="YoM-Mb-E3u"/>
                         <outlet property="myDownSwipeGesture" destination="mjQ-aI-fvv" id="1Ee-jI-zGa"/>
+                        <outlet property="myEditAddPhotoButton" destination="cpc-eI-hgC" id="XGu-vp-jx3"/>
+                        <outlet property="myEditButton" destination="mAE-ht-EBa" id="4uh-0k-jZY"/>
                         <outlet property="myEmail" destination="0aq-qU-wOR" id="mzJ-TD-Grb"/>
+                        <outlet property="myEmailEditTextField" destination="Kbd-n5-qcq" id="HjK-X9-6B5"/>
+                        <outlet property="myFriendEditButton" destination="gx4-77-wnX" id="gQO-9n-Ah5"/>
+                        <outlet property="myHomeAddressEditTextField" destination="Yxc-aI-bQ4" id="250-YA-ddg"/>
                         <outlet property="myImageView" destination="INc-Wn-aEM" id="Gzp-T4-Fcj"/>
                         <outlet property="myLeftSwipeGesture" destination="0hN-wl-ql8" id="ki4-nz-Voz"/>
                         <outlet property="myMaskView" destination="nW8-PL-4pB" id="iTD-uA-IZe"/>
+                        <outlet property="myNameEditTextField" destination="ca9-Ip-UxH" id="OQr-3f-exc"/>
                         <outlet property="myOriginView" destination="Mvg-Jm-JWP" id="48I-QL-XNo"/>
                         <outlet property="myOverlayView" destination="tZE-CV-Ns5" id="8iO-tx-sDr"/>
                         <outlet property="myRightSwipeGesture" destination="2Y2-Fy-HcO" id="v5a-g9-Nl7"/>
@@ -659,11 +686,11 @@
             </objects>
             <point key="canvasLocation" x="2323" y="-639"/>
         </scene>
-        <!--Navigation Controller - FRIENDS-->
+        <!--Navigation Controller - ALL PROFILES-->
         <scene sceneID="CgS-E1-Dou">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WPp-Ja-udC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FRIENDS" id="ERd-pu-X1r"/>
+                    <tabBarItem key="tabBarItem" title="ALL PROFILES" id="ERd-pu-X1r"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GMm-a6-5kx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -678,11 +705,13 @@
             </objects>
             <point key="canvasLocation" x="1797" y="70"/>
         </scene>
-        <!--Navigation Controller - FRIENDS WITH BENEFITS-->
+        <!--Navigation Controller - FRIENDS-->
         <scene sceneID="DYv-o1-rn7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3vE-i5-UMg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FRIENDS WITH BENEFITS" id="xSi-MF-OfH"/>
+                    <tabBarItem key="tabBarItem" title="FRIENDS" id="xSi-MF-OfH">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bxc-dK-Vz5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -697,11 +726,11 @@
             </objects>
             <point key="canvasLocation" x="1797" y="-639"/>
         </scene>
-        <!--Navigation Controller - MET AT A BAR-->
+        <!--Navigation Controller - CO-WORKERS-->
         <scene sceneID="nZY-7Q-sdC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Q7-ID-FTd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MET AT A BAR" id="L2P-83-oei"/>
+                    <tabBarItem key="tabBarItem" title="CO-WORKERS" id="L2P-83-oei"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ae-eI-2Z4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

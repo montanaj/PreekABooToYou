@@ -54,7 +54,7 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+//asks permission of phone to use media library
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     self.myImageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
@@ -73,11 +73,22 @@
 {
     
 }
+//reloads photo view with selected photo
 - (IBAction)onAddPhotoPressed:(id)sender
 {
     [self presentViewController:self.imagePickerController animated:YES completion:nil];
     [self reloadInputViews];
 }
-
+//changes state of isFriend which enables adding to friendArray
+- (IBAction)onAddFriendButtonPressed:(id)sender
+{
+   
+}
+//changes state of isCoworker which enables adding to coworkerArray
+- (IBAction)onAddCoworkerButtonPressed:(id)sender {
+}
+ 
+- (IBAction)onAddOtherButtonPressed:(id)sender {
+}
 
 @end

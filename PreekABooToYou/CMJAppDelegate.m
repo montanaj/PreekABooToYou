@@ -22,7 +22,7 @@
     UITabBarController *tabBarController = (id)self.window.rootViewController;
     AllProfileViewController *allProfileViewController;
     FriendsViewController *friendsViewController;
-    CoWorkersViewController *coWorkersViewController;
+    CoWorkerViewController *coWorkersViewController;
     for (UINavigationController *navController in tabBarController.viewControllers)
     {
         for (UIViewController *viewController in navController.viewControllers)
@@ -35,7 +35,7 @@
             {
                 friendsViewController = (id)viewController;
             }
-            else if ([viewController isKindOfClass:[CoWorkersViewController class]])
+            else if ([viewController isKindOfClass:[CoWorkerViewController class]])
             {
                 coWorkersViewController = (id)viewController;
             }

@@ -25,11 +25,13 @@
 		7028060518EF2B0D00AAA935 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7028060418EF2B0D00AAA935 /* Storyboard.storyboard */; };
 		7028061218EF476B00AAA935 /* UserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028061118EF476B00AAA935 /* UserCollectionViewCell.m */; };
 		7028061518EF7A8600AAA935 /* DetailProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7028061418EF7A8600AAA935 /* DetailProfileViewController.m */; };
-		70A103C318F083DA00D5FA66 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A103C218F083DA00D5FA66 /* User.m */; };
 		70A103C618F08A7E00D5FA66 /* calvin.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A103C418F08A7E00D5FA66 /* calvin.png */; };
 		70A103C718F08A7E00D5FA66 /* clairePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A103C518F08A7E00D5FA66 /* clairePhoto.png */; };
 		70AA11B218F20B4F0069250A /* AllProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA11B118F20B4F0069250A /* AllProfileViewController.m */; };
 		70AA11B518F20D930069250A /* CoWorkerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA11B418F20D930069250A /* CoWorkerViewController.m */; };
+		70AA11B818F21A440069250A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA11B718F21A440069250A /* User.m */; };
+		70AA11BB18F21CA60069250A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA11BA18F21CA60069250A /* User.m */; };
+		70AA11BE18F222840069250A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA11BD18F222840069250A /* User.m */; };
 		70AF17CF18F1D7E400979CBC /* rask.png in Resources */ = {isa = PBXBuildFile; fileRef = 70AF17CE18F1D7E400979CBC /* rask.png */; };
 		70AF17D218F203FE00979CBC /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AF17D118F203FE00979CBC /* FriendsViewController.m */; };
 		70AF520018F0AB73009EDF34 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AF51FF18F0AB73009EDF34 /* AddUserViewController.m */; };
@@ -69,14 +71,18 @@
 		7028061118EF476B00AAA935 /* UserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserCollectionViewCell.m; path = PreekABooToYou/UserCollectionViewCell.m; sourceTree = "<group>"; };
 		7028061318EF7A8600AAA935 /* DetailProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailProfileViewController.h; sourceTree = "<group>"; };
 		7028061418EF7A8600AAA935 /* DetailProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailProfileViewController.m; sourceTree = "<group>"; };
-		70A103C118F083DA00D5FA66 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		70A103C218F083DA00D5FA66 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		70A103C418F08A7E00D5FA66 /* calvin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calvin.png; path = PreekABooToYou/calvin.png; sourceTree = "<group>"; };
 		70A103C518F08A7E00D5FA66 /* clairePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clairePhoto.png; path = PreekABooToYou/clairePhoto.png; sourceTree = "<group>"; };
 		70AA11B018F20B4F0069250A /* AllProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllProfileViewController.h; sourceTree = "<group>"; };
 		70AA11B118F20B4F0069250A /* AllProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllProfileViewController.m; sourceTree = "<group>"; };
 		70AA11B318F20D930069250A /* CoWorkerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoWorkerViewController.h; path = ../CoWorkerViewController.h; sourceTree = "<group>"; };
 		70AA11B418F20D930069250A /* CoWorkerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoWorkerViewController.m; path = ../CoWorkerViewController.m; sourceTree = "<group>"; };
+		70AA11B618F21A440069250A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = PreekABooToYou/User.h; sourceTree = "<group>"; };
+		70AA11B718F21A440069250A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = PreekABooToYou/User.m; sourceTree = "<group>"; };
+		70AA11B918F21CA60069250A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		70AA11BA18F21CA60069250A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		70AA11BC18F222840069250A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		70AA11BD18F222840069250A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		70AF17CE18F1D7E400979CBC /* rask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rask.png; path = PreekABooToYou/rask.png; sourceTree = "<group>"; };
 		70AF17D018F203FE00979CBC /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		70AF17D118F203FE00979CBC /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
@@ -122,6 +128,10 @@
 				702805E018EF2A8C00AAA935 /* CMJAppDelegate.h */,
 				702805E118EF2A8C00AAA935 /* CMJAppDelegate.m */,
 				702805E318EF2A8C00AAA935 /* PreekABooToYou.xcdatamodeld */,
+				70AA11B918F21CA60069250A /* User.h */,
+				70AA11BA18F21CA60069250A /* User.m */,
+				70AA11B618F21A440069250A /* User.h */,
+				70AA11B718F21A440069250A /* User.m */,
 				7028060418EF2B0D00AAA935 /* Storyboard.storyboard */,
 				702805D718EF2A8C00AAA935 /* PreekABooToYou */,
 				702805F418EF2A8D00AAA935 /* PreekABooToYouTests */,
@@ -164,8 +174,8 @@
 				7028061418EF7A8600AAA935 /* DetailProfileViewController.m */,
 				70AF51FE18F0AB73009EDF34 /* AddUserViewController.h */,
 				70AF51FF18F0AB73009EDF34 /* AddUserViewController.m */,
-				70A103C118F083DA00D5FA66 /* User.h */,
-				70A103C218F083DA00D5FA66 /* User.m */,
+				70AA11BC18F222840069250A /* User.h */,
+				70AA11BD18F222840069250A /* User.m */,
 				702805D818EF2A8C00AAA935 /* Supporting Files */,
 			);
 			path = PreekABooToYou;
@@ -303,10 +313,12 @@
 				70AA11B518F20D930069250A /* CoWorkerViewController.m in Sources */,
 				7028061518EF7A8600AAA935 /* DetailProfileViewController.m in Sources */,
 				70AF520018F0AB73009EDF34 /* AddUserViewController.m in Sources */,
-				70A103C318F083DA00D5FA66 /* User.m in Sources */,
 				70AF17D218F203FE00979CBC /* FriendsViewController.m in Sources */,
 				702805E518EF2A8C00AAA935 /* PreekABooToYou.xcdatamodeld in Sources */,
+				70AA11B818F21A440069250A /* User.m in Sources */,
 				702805DE18EF2A8C00AAA935 /* main.m in Sources */,
+				70AA11BB18F21CA60069250A /* User.m in Sources */,
+				70AA11BE18F222840069250A /* User.m in Sources */,
 				7028061218EF476B00AAA935 /* UserCollectionViewCell.m in Sources */,
 				70AA11B218F20B4F0069250A /* AllProfileViewController.m in Sources */,
 				702805E218EF2A8C00AAA935 /* CMJAppDelegate.m in Sources */,

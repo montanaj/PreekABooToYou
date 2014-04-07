@@ -112,7 +112,7 @@
         NSIndexPath *indexPath = [self.myCollectionView indexPathForCell:sender];
         DetailProfileViewController *destination = segue.destinationViewController;
         destination.managedObjectContext = self.managedObjectContext; //passing MOC
-        destination.allUsersArray = self.allUsersArray;
+        destination.currentUsersArray = self.allUsersArray;
         destination.currentIndex = indexPath.row;
     }
     else if ([sender isKindOfClass:[UIBarButtonItem class]])

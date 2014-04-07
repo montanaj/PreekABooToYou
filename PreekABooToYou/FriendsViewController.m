@@ -7,10 +7,17 @@
 //
 
 #import "FriendsViewController.h"
+#import "AllProfileViewController.h"
+#import <AddressBookUI/AddressBookUI.h>
+#import <AddressBook/AddressBook.h>
+#import "User.h"
+#import "UserCollectionViewCell.h"
+#import "DetailProfileViewController.h"
+#import "AddUserViewController.h"
 
-@interface FriendsViewController ()
+@interface FriendsViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic) NSArray *friendsArray;
+@property (nonatomic) NSMutableArray *friendsArray;
 
 @property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
@@ -24,7 +31,7 @@
 {
     [super viewDidLoad];
     //these are very important items
-    self.friendsArray = [NSArray new];
+    self.friendsArray = [NSMutableArray new];
     
     [self load];
     
@@ -58,9 +65,16 @@
 -(void)load
 {
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"User"];
-    self.friendsArray = [self.managedObjectContext executeFetchRequest:request error:nil];
-    
-    if (user.isFriend.boolValue && ![self.friendsArray containsObject:user]) {
+    NSArray *tempArray = [self.managedObjectContext executeFetchRequest:request error:nil];
+    for (User *user in tempArray)
+    {
+        if (user.isFriend.boolValue && ![self.friendsArray containsObject:user])
+        {
+            [self.friendsArray addObject:user];
+        }
+    }
+    if (!tempArray.count > 0) {
+
         User *user1 = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
         user1.name = @"Claire Montana";
         user1.address = @"21 Goethe St. Chicago, IL 60610";
@@ -105,7 +119,7 @@
         NSIndexPath *indexPath = [self.myCollectionView indexPathForCell:sender];
         DetailProfileViewController *destination = segue.destinationViewController;
         destination.managedObjectContext = self.managedObjectContext; //passing MOC
-        destination.allUsersArray = self.allUsersArray;
+        destination.currentUsersArray = self.friendsArray;
         destination.currentIndex = indexPath.row;
     }
     else if ([sender isKindOfClass:[UIBarButtonItem class]])

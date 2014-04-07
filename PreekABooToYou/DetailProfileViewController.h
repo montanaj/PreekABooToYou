@@ -11,7 +11,7 @@
 @interface DetailProfileViewController : UIViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) NSArray *allUsersArray;
+@property (strong, nonatomic) NSArray *currentUsersArray;
 @property NSInteger currentIndex;
 
 @end
